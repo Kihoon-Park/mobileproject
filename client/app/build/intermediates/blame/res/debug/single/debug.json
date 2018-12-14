@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "D:\\android_programming-master (3)\\android_programming-master\\chap13\\RestClient\\app\\build\\intermediates\\res\\merged\\debug\\layout_main.xml.flat",
+        "source": "D:\\android_programming-master (3)\\android_programming-master\\chap13\\RestClient\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "D:\\android_programming-master (3)\\android_programming-master\\chap13\\RestClient\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher.png.flat",
+        "source": "D:\\android_programming-master (3)\\android_programming-master\\chap13\\RestClient\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\android_programming-master (3)\\android_programming-master\\chap13\\RestClient\\app\\build\\intermediates\\res\\merged\\debug\\menu_web_download.xml.flat",
+        "source": "D:\\android_programming-master (3)\\android_programming-master\\chap13\\RestClient\\app\\src\\main\\res\\menu\\web_download.xml"
+    },
+    {
+        "merged": "D:\\android_programming-master (3)\\android_programming-master\\chap13\\RestClient\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher.png.flat",
+        "source": "D:\\android_programming-master (3)\\android_programming-master\\chap13\\RestClient\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\android_programming-master (3)\\android_programming-master\\chap13\\RestClient\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher.png.flat",
+        "source": "D:\\android_programming-master (3)\\android_programming-master\\chap13\\RestClient\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\android_programming-master (3)\\android_programming-master\\chap13\\RestClient\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher.png.flat",
+        "source": "D:\\android_programming-master (3)\\android_programming-master\\chap13\\RestClient\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    }
+]

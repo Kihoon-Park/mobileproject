@@ -1,0 +1,4 @@
+#Mon Nov 26 16:18:42 KST 2018
+base.0=D\:\\android_programming-master (3)\\android_programming-master\\chap13\\RestClient\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\4
+path.0=classes.dex
+renamed.0=classes.dex
