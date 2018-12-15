@@ -10,19 +10,19 @@ public class Product {
 
     @SerializedName("p_id")
     @Expose
-    private String p_id;
+    private Integer p_id;
     @SerializedName("p_type")
     @Expose
     private Integer p_type;
     @SerializedName("p_name")
     @Expose
-    private String u_name;
-    @SerializedName("p_lender")
+    private String p_name;
+    @SerializedName("p_lender_id")
     @Expose
-    private String p_lender;
-    @SerializedName("p_user")
+    private String p_lender_id;
+    @SerializedName("p_borrower")
     @Expose
-    private String p_user;
+    private String p_borrower;
     @SerializedName("p_isrent")
     @Expose
     private Integer p_isrnet;
@@ -34,11 +34,12 @@ public class Product {
     private Date p_on_end;
 
     //name
-    public String getName() {
+    public Integer getID() {
         return p_id;
     }
-    public void setName(String name) {
-        this.p_id = name;
+
+    public String getName(){
+        return p_name;
     }
 
 
