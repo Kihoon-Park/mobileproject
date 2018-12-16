@@ -18,6 +18,8 @@ public class ProductView extends LinearLayout {
         list_name_TextView = (TextView) findViewById(R.id.list_p_name);
         list_button = (Button) findViewById(R.id.list_button3);
 
+
+
     }
 
     private void inflation_init(Context context) {

@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".login" />
-        <activity android:name=".user_main"></activity>
+        <activity android:name=".user_main" />
+        <activity android:name=".User_canrent"></activity>
     </application>
 
 </manifest>
