@@ -1,4 +1,4 @@
-var express = require('express');
+﻿var express = require('express');
 var mysql = require('mysql');
 var bodyParser = require('body-parser');
 var app = express();
@@ -77,12 +77,14 @@ app.get("/product/isnotrent", function(req, res){
 
 
 app.post("/proudct/rent", function(req, res){
+    console.log("hwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww");
     var body = req.body;//pid,mid 입력받아야 함
-    connection.query('UPDATE product SET p_rnet = 1 ,on_borrower = "Kihoon Park" , p_on_start=NOW(),p_on_end = date_add(now(), interval +2 day) WHERE ? = p_id',body.p_id, function(err, rows, fields) {
+    connection.query('UPDATE product SET p_isrent = 1 ,on_borrower = "Kihoon Park" , p_on_start=NOW(),p_on_end = date_add(now(), interval +2 day) WHERE p_id=10001', function(err, rows, fields) {
 
         if (!err){
-            console.log('The solution is: ', rows);
-            res.send(rows);
+            console.log('test aaaaaa: ', rows);
+            res.send(body.p_id);
+
         }
         else
             console.log('Error while performing Query.', err);
