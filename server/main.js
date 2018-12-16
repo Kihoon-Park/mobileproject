@@ -74,3 +74,18 @@ app.get("/product/isnotrent", function(req, res){
             console.log('Error while performing Query.', err);
     });
 })
+
+
+app.post("/proudct/rent", function(req, res){
+    var body = req.body;//pid,mid 입력받아야 함
+    connection.query('UPDATE product SET p_rnet = 1 ,on_borrower = "Kihoon Park" , p_on_start=NOW(),p_on_end = date_add(now(), interval +2 day) WHERE ? = p_id',body.p_id, function(err, rows, fields) {
+
+        if (!err){
+            console.log('The solution is: ', rows);
+            res.send(rows);
+        }
+        else
+            console.log('Error while performing Query.', err);
+    });
+
+})

@@ -1,6 +1,7 @@
 package com.example.arlec.myapplication;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -11,13 +12,22 @@ import android.widget.ListView;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.squareup.okhttp.MediaType;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.RequestBody;
+import com.squareup.okhttp.Response;
 
+import java.io.IOException;
 import java.util.concurrent.ExecutionException;
+
+import okhttp3.MultipartBody;
+import okio.BufferedSink;
 
 public class User_canrent extends AppCompatActivity {
     ListView listView;
     myAdapter2 adapter;
     Product[] products;
+    String proudct_db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,10 +83,8 @@ public class User_canrent extends AppCompatActivity {
                 public void onClick(View v) {
                     Log.d("hhhhhhhhhhhhh", String.valueOf(products[position].getID()));
 
-
-
-
-
+                    DownloadTask dt = new DownloadTask();
+                    dt.execute("http://ec2-54-91-46-126.compute-1.amazonaws.com:3000/product/rent");
                     Intent intent = new Intent(getApplicationContext(),user_main.class);
                     startActivity(intent);
                 }
@@ -87,5 +95,58 @@ public class User_canrent extends AppCompatActivity {
 
 
         }
+    }
+
+    public static boolean isNetworkAvailable() {
+        return true;
+    }
+
+    static class DownloadTask extends AsyncTask<String, Integer, String> {
+        String s = null;
+        private MultipartBody rbody;
+
+        @Override
+        protected String doInBackground(String... url) {
+
+            try {
+                s = downloadUrl(url[0]);
+            } catch (Exception e) {
+                Log.d("Background Task", e.toString());
+            }
+            return s;
+        }
+
+        private String downloadUrl(String strUrl) throws IOException {
+            try {
+                Log.d("HHHHHHHHHHHHHHHHHHHHHHHWwwwwdfd",strUrl);
+                OkHttpClient client = new OkHttpClient();
+                com.squareup.okhttp.RequestBody bdy = new RequestBody() {
+                    @Override
+                    public MediaType contentType() {
+                        return null;
+                    }
+
+                    @Override
+                    public void writeTo(BufferedSink sink) throws IOException {
+
+                    }
+                };
+
+
+                com.squareup.okhttp.Request request = new com.squareup.okhttp.Request.Builder()
+                        .url(strUrl)
+                        .build();
+
+                Response response = client.newCall(request).execute();
+                return response.body().string();
+
+            } catch (Exception e) {
+                Log.d("Exception download", e.toString());
+            } finally {
+
+            }
+            return "{}";
+        }
+
     }
 }

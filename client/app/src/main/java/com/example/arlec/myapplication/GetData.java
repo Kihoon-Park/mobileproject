@@ -47,29 +47,6 @@ public class GetData {
             }
             return "{}";
         }
-        /*
-        @Override
-        protected void onPostExecute(String result) {
-            TextView tView = (TextView) findViewById(R.id.textView);
-            tView.setText(result);
-            Toast.makeText(getBaseContext(),
-                    "Web page downloaded successfully", Toast.LENGTH_SHORT)
-                    .show();
 
-            Log.i("RESPONSE", result);
-            Gson gson = new GsonBuilder()
-                    .setLenient()
-                    .create();
-            //Student [] studes = gson.fromJson("[{\"name\": \"kim\", \"email\": \"kim@gmail.com\", \"phone\": \"010-1234-0001\", \"age\": 10}]", Student[].class);
-            User [] users = gson.fromJson(result, User[].class);
-            for(User s: users) {
-                Log.i("U_ID", s.getName());
-                Log.i("U_PASSWORD", s.getPassword());
-
-                System.out.println(s.getName());
-
-        }
-
-        */
     }
 }
